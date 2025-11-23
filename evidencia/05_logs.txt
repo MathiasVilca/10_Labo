@@ -1,0 +1,15 @@
+2025-11-23 17:18:43,549 - INFO - microservice - Arrancando la aplicación
+2025-11-23 17:18:43,550 - INFO - microservice - Inicializando base de datos en app.db
+INFO:     172.17.0.1:57014 - "GET /api/items/ HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56614 - "GET /api/items/ HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57718 - "GET /api/items/ HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57728 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.17.0.1:63708 - "POST /api/items/ HTTP/1.1" 422 Unprocessable Entity
+INFO:     172.17.0.1:62214 - "POST /api/items/ HTTP/1.1" 422 Unprocessable Entity
+2025-11-23 17:28:59,301 - INFO - microservice - Ítem insertado: Item de prueba (id=2)
+2025-11-23 17:28:59,302 - INFO - microservice - Ítem creado por la lógica de negocio: {'id': 2, 'name': 'Item de prueba', 'description': 'descripcion de prueba'}
+INFO:     172.17.0.1:64572 - "POST /api/items/ HTTP/1.1" 201 Created
+2025-11-23 17:29:24,806 - INFO - microservice - Ítem insertado: Item de prueba sin descripcion (id=3)
+2025-11-23 17:29:24,807 - INFO - microservice - Ítem creado por la lógica de negocio: {'id': 3, 'name': 'Item de prueba sin descripcion', 'description': None}
+INFO:     172.17.0.1:57814 - "POST /api/items/ HTTP/1.1" 201 Created
+INFO:     172.17.0.1:55218 - "GET /api/items/ HTTP/1.1" 200 OK

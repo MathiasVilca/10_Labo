@@ -1,0 +1,14 @@
+{"name":"Item de prueba","description":"descripcion de prueba","id":2}
+{"name":"Item de prueba sin descripcion","description":null,"id":3}
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   207  100   207    0     0  32078      0 --:--:-- --:--:-- --:--:-- 34500
+HTTP/1.1 200 OK
+date: Sun, 23 Nov 2025 17:29:52 GMT
+server: uvicorn
+content-length: 207
+content-type: application/json
+
+[{"name":"test-item","description":"Descripción de prueba","id":1},{"name":"Item de prueba","description":"descripcion de prueba","id":2},{"name":"Item de prueba sin descripcion","description":null,"id":3}]

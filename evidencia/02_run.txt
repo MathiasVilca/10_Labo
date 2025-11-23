@@ -1,0 +1,3 @@
+455fbe001724a4667d0c8986a11610bb73bf437e1ad0cbd5a6579b852d5b9bc1
+CONTAINER ID   IMAGE                        COMMAND                  CREATED                  STATUS                  PORTS                                 NAMES
+455fbe001724   ejemplo-microservice:0.1.0   "uvicorn microservic…"   Less than a second ago   Up Less than a second   0.0.0.0:80->80/tcp, [::]:80->80/tcp   ejemplo-ms

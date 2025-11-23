@@ -1,0 +1,158 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.16kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 257B done
+#3 DONE 0.0s
+
+#4 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:b43ff04d5df04ad5cabb80890b7ef74e8410e3395b19af970dcd52d7a4bff921
+#4 resolve docker.io/library/python:3.12-slim@sha256:b43ff04d5df04ad5cabb80890b7ef74e8410e3395b19af970dcd52d7a4bff921 0.0s done
+#4 CACHED
+
+#5 [builder 2/4] WORKDIR /build
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 18.62kB done
+#6 DONE 0.0s
+
+#7 [builder 3/4] COPY requirements.txt .
+#7 DONE 0.1s
+
+#8 [production 2/6] RUN groupadd -r appuser     && useradd -m -r -g appuser appuser
+#8 DONE 0.4s
+
+#9 [builder 4/4] RUN pip install --user --no-cache-dir -r requirements.txt
+#9 ...
+
+#10 [production 3/6] WORKDIR /app
+#10 DONE 0.1s
+
+#9 [builder 4/4] RUN pip install --user --no-cache-dir -r requirements.txt
+#9 2.439 Collecting fastapi==0.110.0 (from -r requirements.txt (line 2))
+#9 2.589   Downloading fastapi-0.110.0-py3-none-any.whl.metadata (25 kB)
+#9 2.627 Collecting uvicorn==0.29.0 (from uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 2.634   Downloading uvicorn-0.29.0-py3-none-any.whl.metadata (6.3 kB)
+#9 2.782 Collecting pydantic==2.8.1 (from -r requirements.txt (line 4))
+#9 2.789   Downloading pydantic-2.8.1-py3-none-any.whl.metadata (124 kB)
+#9 2.834 Collecting httpx<0.28,>=0.27 (from -r requirements.txt (line 7))
+#9 2.840   Downloading httpx-0.27.2-py3-none-any.whl.metadata (7.1 kB)
+#9 2.896 Collecting pytest==8.2.1 (from -r requirements.txt (line 8))
+#9 2.903   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
+#9 3.032 Collecting starlette<0.37.0,>=0.36.3 (from fastapi==0.110.0->-r requirements.txt (line 2))
+#9 3.040   Downloading starlette-0.36.3-py3-none-any.whl.metadata (5.9 kB)
+#9 3.067 Collecting typing-extensions>=4.8.0 (from fastapi==0.110.0->-r requirements.txt (line 2))
+#9 3.074   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#9 3.105 Collecting click>=7.0 (from uvicorn==0.29.0->uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 3.112   Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+#9 3.128 Collecting h11>=0.8 (from uvicorn==0.29.0->uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 3.135   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#9 3.152 Collecting annotated-types>=0.4.0 (from pydantic==2.8.1->-r requirements.txt (line 4))
+#9 3.159   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#9 4.139 Collecting pydantic-core==2.20.1 (from pydantic==2.8.1->-r requirements.txt (line 4))
+#9 4.145   Downloading pydantic_core-2.20.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+#9 4.161 Collecting iniconfig (from pytest==8.2.1->-r requirements.txt (line 8))
+#9 4.169   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#9 4.185 Collecting packaging (from pytest==8.2.1->-r requirements.txt (line 8))
+#9 4.194   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 4.206 Collecting pluggy<2.0,>=1.5 (from pytest==8.2.1->-r requirements.txt (line 8))
+#9 4.212   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#9 4.267 Collecting httptools>=0.5.0 (from uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 4.274   Downloading httptools-0.7.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+#9 4.292 Collecting python-dotenv>=0.13 (from uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 4.298   Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+#9 4.339 Collecting pyyaml>=5.1 (from uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 4.344   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#9 4.386 Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0 (from uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 4.395   Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+#9 4.471 Collecting watchfiles>=0.13 (from uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 4.476   Downloading watchfiles-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#9 4.556 Collecting websockets>=10.4 (from uvicorn[standard]==0.29.0->-r requirements.txt (line 3))
+#9 4.561   Downloading websockets-15.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#9 4.586 Collecting anyio (from httpx<0.28,>=0.27->-r requirements.txt (line 7))
+#9 4.591   Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+#9 4.611 Collecting certifi (from httpx<0.28,>=0.27->-r requirements.txt (line 7))
+#9 4.618   Downloading certifi-2025.11.12-py3-none-any.whl.metadata (2.5 kB)
+#9 4.640 Collecting httpcore==1.* (from httpx<0.28,>=0.27->-r requirements.txt (line 7))
+#9 4.647   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#9 4.666 Collecting idna (from httpx<0.28,>=0.27->-r requirements.txt (line 7))
+#9 4.672   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 4.684 Collecting sniffio (from httpx<0.28,>=0.27->-r requirements.txt (line 7))
+#9 4.691   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#9 4.743 Downloading fastapi-0.110.0-py3-none-any.whl (92 kB)
+#9 4.756 Downloading uvicorn-0.29.0-py3-none-any.whl (60 kB)
+#9 4.766 Downloading pydantic-2.8.1-py3-none-any.whl (423 kB)
+#9 4.809 Downloading pytest-8.2.1-py3-none-any.whl (339 kB)
+#9 4.846 Downloading pydantic_core-2.20.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#9 5.029    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 11.7 MB/s eta 0:00:00
+#9 5.036 Downloading httpx-0.27.2-py3-none-any.whl (76 kB)
+#9 5.048 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#9 5.062 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#9 5.068 Downloading click-8.3.1-py3-none-any.whl (108 kB)
+#9 5.082 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#9 5.091 Downloading httptools-0.7.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (517 kB)
+#9 5.142 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#9 5.149 Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+#9 5.156 Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+#9 5.228    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 12.2 MB/s eta 0:00:00
+#9 5.235 Downloading starlette-0.36.3-py3-none-any.whl (71 kB)
+#9 5.251 Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+#9 5.271 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 5.282 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#9 5.289 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#9 5.298 Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.4 MB)
+#9 5.679    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 11.7 MB/s eta 0:00:00
+#9 5.685 Downloading watchfiles-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+#9 5.731 Downloading websockets-15.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+#9 5.753 Downloading certifi-2025.11.12-py3-none-any.whl (159 kB)
+#9 5.772 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#9 5.778 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 5.928 Installing collected packages: websockets, uvloop, typing-extensions, sniffio, pyyaml, python-dotenv, pluggy, packaging, iniconfig, idna, httptools, h11, click, certifi, annotated-types, uvicorn, pytest, pydantic-core, httpcore, anyio, watchfiles, starlette, pydantic, httpx, fastapi
+#9 6.144   WARNING: The script websockets is installed in '/root/.local/bin' which is not on PATH.
+#9 6.144   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+#9 6.607   WARNING: The script dotenv is installed in '/root/.local/bin' which is not on PATH.
+#9 6.607   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+#9 7.089   WARNING: The script uvicorn is installed in '/root/.local/bin' which is not on PATH.
+#9 7.089   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+#9 7.420   WARNING: The scripts py.test and pytest are installed in '/root/.local/bin' which is not on PATH.
+#9 7.420   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+#9 7.829   WARNING: The script watchfiles is installed in '/root/.local/bin' which is not on PATH.
+#9 7.829   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+#9 8.366   WARNING: The script httpx is installed in '/root/.local/bin' which is not on PATH.
+#9 8.366   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+#9 8.478 Successfully installed annotated-types-0.7.0 anyio-4.11.0 certifi-2025.11.12 click-8.3.1 fastapi-0.110.0 h11-0.16.0 httpcore-1.0.9 httptools-0.7.1 httpx-0.27.2 idna-3.11 iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pydantic-2.8.1 pydantic-core-2.20.1 pytest-8.2.1 python-dotenv-1.2.1 pyyaml-6.0.3 sniffio-1.3.1 starlette-0.36.3 typing-extensions-4.15.0 uvicorn-0.29.0 uvloop-0.22.1 watchfiles-1.1.1 websockets-15.0.1
+#9 8.479 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 8.600 
+#9 8.600 [notice] A new release of pip is available: 25.0.1 -> 25.3
+#9 8.600 [notice] To update, run: pip install --upgrade pip
+#9 DONE 8.8s
+
+#11 [production 4/6] COPY --from=builder /root/.local /home/appuser/.local
+#11 DONE 0.3s
+
+#12 [production 5/6] COPY . .
+#12 DONE 0.1s
+
+#13 [production 6/6] RUN chown -R appuser:appuser /app
+#13 DONE 0.4s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 2.8s done
+#14 exporting manifest sha256:4cd75cae80b3d01556126385f62c938400494510f1f9d3c798ec99ff1a3c1256 0.0s done
+#14 exporting config sha256:aad92a7cd34f02d84cf98356c173f872dafd6ac4812fdfa242ea3f73fabaefb7 0.0s done
+#14 exporting attestation manifest sha256:1d4776ad47116450cbabb843be656d97604de327cd9682688655bb7d432fb549 0.0s done
+#14 exporting manifest list sha256:e16a819bfd88203c500b07e5633536b9010f9c6a68303c8078cc18cdd4472056
+#14 exporting manifest list sha256:e16a819bfd88203c500b07e5633536b9010f9c6a68303c8078cc18cdd4472056 0.0s done
+#14 naming to docker.io/library/ejemplo-microservice:0.1.0 done
+#14 unpacking to docker.io/library/ejemplo-microservice:0.1.0
+#14 unpacking to docker.io/library/ejemplo-microservice:0.1.0 0.8s done
+#14 DONE 3.8s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ppewsfe2i50j9hbxoistd49vs
